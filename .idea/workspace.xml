@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251958ba-1583-48b6-8fe5-bbe5ce3818dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="251958ba-1583-48b6-8fe5-bbe5ce3818dd" name="Changes" comment="yuju">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,30 +23,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2jQRaVjREfSOHSkqhPY2MleYwec" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/test/resources/Driver",
-    "onboarding.tips.debug.path": "C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/test/resources/Driver&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sofia.buitrago\Documents\BeforeAfterTestNGLogin\src\test\resources\Driver" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sofia.buitrago\Documents\BeforeAfterTestNGLogin\src\test\resources\TestNG" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.Login">
+  <component name="RunManager">
     <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BeforeAfterTestNGLogin" />
       <option name="PACKAGE_NAME" value="" />
@@ -60,11 +65,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login.SuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Register" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BeforeAfterTestNGLogin" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Login" />
-      <option name="METHOD_NAME" value="SuccessfulLogin" />
+      <option name="MAIN_CLASS_NAME" value="Register" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Register.registerWithEmptyDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BeforeAfterTestNGLogin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Register" />
+      <option name="METHOD_NAME" value="registerWithEmptyDetails" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -72,12 +88,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login.UnSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Register.registerWithRegisteredEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BeforeAfterTestNGLogin" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Login" />
-      <option name="METHOD_NAME" value="UnSuccessfulLogin" />
+      <option name="MAIN_CLASS_NAME" value="Register" />
+      <option name="METHOD_NAME" value="registerWithRegisteredEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BeforeAfterTestNGLogin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Search" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -86,9 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Search" />
         <item itemvalue="TestNG.Login" />
-        <item itemvalue="TestNG.Login.SuccessfulLogin" />
-        <item itemvalue="TestNG.Login.UnSuccessfulLogin" />
+        <item itemvalue="TestNG.Register" />
+        <item itemvalue="TestNG.Register.registerWithEmptyDetails" />
+        <item itemvalue="TestNG.Register.registerWithRegisteredEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -101,7 +130,20 @@
       <option name="presentableId" value="Default" />
       <updated>1721317380417</updated>
     </task>
+    <task id="LOCAL-00001" summary="yuju">
+      <option name="closed" value="true" />
+      <created>1721322419264</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721322419264</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="yuju" />
+    <option name="LAST_COMMIT_MESSAGE" value="yuju" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -111,9 +153,14 @@
           <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Search.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Login.java</url>
-          <line>32</line>
+          <line>27</line>
           <properties class="Login" method="SuccessfulLogin">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

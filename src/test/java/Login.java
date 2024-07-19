@@ -1,28 +1,26 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.sql.Time;
-import java.util.concurrent.TimeUnit;
-
-public class Login {
+public class Login extends Base {
 
     WebDriver driver;
 
     @BeforeMethod /*aca use el method y no before test porque lo necesito para cada uno de los test*/
     public void setupUntilLogin(){
-        driver = new ChromeDriver();
-        driver.navigate().to("https://tutorialsninja.com/demo/");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+//        driver = new ChromeDriver();
+//        driver.navigate().to("https://tutorialsninja.com/demo/");
+//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//        driver.findElement(By.xpath("//span[text()='My Account']")).click();
+        driver =  openingThePage();
         driver.findElement(By.xpath("//span[text()='My Account']")).click();
         driver.findElement(By.linkText("Login")).click();
     }
     @AfterMethod
     public void closeQuit(){
-        System.out.println("acá acaba el test");
+//        System.out.println("acá acaba el test");
         driver.close();
         driver.quit();
     }
@@ -44,6 +42,13 @@ public class Login {
         String Actual = driver.findElement(By.xpath("//div[contains(text(),'Warning')]")).getText();
         String Expected = "Warning: No match for E-Mail Address and/or Password.";
         Assert.assertEquals(Actual,Expected);
+        System.out.println(Util.generateGmail());
+
 
     }
+
+
+
+
+
 }
