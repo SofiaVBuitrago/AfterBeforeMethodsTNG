@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
 import java.sql.Driver;
 
 public class Search extends Base {
+    public Search(){
+        super();
+    }
     WebDriver driver;
     @BeforeMethod
     public void setup(){

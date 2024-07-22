@@ -6,6 +6,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Register extends Base {
+
+    public Register(){
+        super();
+    }
     WebDriver driver;
     @BeforeMethod
     public void setup (){
