@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251958ba-1583-48b6-8fe5-bbe5ce3818dd" name="Changes" comment="created different classes to keep the parts of the page separated, and the run all the classes/tcs using a testNG xml file">
+    <list default="true" id="251958ba-1583-48b6-8fe5-bbe5ce3818dd" name="Changes" comment="to aovid hardcoded data, I created a configuration.properties file to read the data and also I'm implementing pom/pf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Locators/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Locators/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Locators/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Locators/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestNG/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNG/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/test/resources/Driver&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/main/java/TestData",
+    "onboarding.tips.debug.path": "C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sofia.buitrago\Documents\BeforeAfterTestNGLogin\src\main\java\TestData" />
       <recent name="C:\Users\sofia.buitrago\Documents\BeforeAfterTestNGLogin\src\test\resources\Driver" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -62,17 +67,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BeforeAfterTestNGLogin" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Login" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Register" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BeforeAfterTestNGLogin" />
       <option name="PACKAGE_NAME" value="" />
@@ -84,11 +78,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Register.registerWithEmptyDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Register.registerOnThePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BeforeAfterTestNGLogin" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Register" />
-      <option name="METHOD_NAME" value="registerWithEmptyDetails" />
+      <option name="METHOD_NAME" value="registerOnThePage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -119,13 +113,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Search.SearchWithExistingProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BeforeAfterTestNGLogin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Search" />
+      <option name="METHOD_NAME" value="SearchWithExistingProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Register" />
         <item itemvalue="TestNG.Search" />
-        <item itemvalue="TestNG.Login" />
-        <item itemvalue="TestNG.Register.registerWithEmptyDetails" />
+        <item itemvalue="TestNG.Search.SearchWithExistingProduct" />
+        <item itemvalue="TestNG.Register" />
         <item itemvalue="TestNG.Register.registerWithRegisteredEmail" />
+        <item itemvalue="TestNG.Register.registerOnThePage" />
       </list>
     </recent_temporary>
   </component>
@@ -154,13 +160,22 @@
       <option name="project" value="LOCAL" />
       <updated>1721418162025</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="to aovid hardcoded data, I created a configuration.properties file to read the data and also I'm implementing pom/pf">
+      <option name="closed" value="true" />
+      <created>1721662717246</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721662717246</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yuju" />
     <MESSAGE value="created different classes to keep the parts of the page separated, and the run all the classes/tcs using a testNG xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="created different classes to keep the parts of the page separated, and the run all the classes/tcs using a testNG xml file" />
+    <MESSAGE value="to aovid hardcoded data, I created a configuration.properties file to read the data and also I'm implementing pom/pf" />
+    <option name="LAST_COMMIT_MESSAGE" value="to aovid hardcoded data, I created a configuration.properties file to read the data and also I'm implementing pom/pf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -172,17 +187,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Search.java</url>
-          <line>9</line>
+          <line>8</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Login.java</url>
-          <line>32</line>
-          <properties class="Login" method="SuccessfulLogin">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Register.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

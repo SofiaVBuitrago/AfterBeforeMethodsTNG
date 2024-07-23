@@ -1,11 +1,10 @@
-import org.openqa.selenium.By;
+import Locators.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.sql.Driver;
 
 public class Search extends Base {
     public Search(){
@@ -21,27 +20,30 @@ public class Search extends Base {
         driver.close();
         driver.quit();
     }
-    @Test
-    public void SearchWithExistingProduct(){
+    @DataProvider
+    public Object [][] TestData(){
+        Object[][] data= {{"HP"}};
+        return data;
+    }
+    @Test(dataProvider = "TestData")
+    public void SearchWithExistingProduct(String computer){
 
-        driver.findElement(By.name("search")).sendKeys("HP");
-        driver.findElement(By.xpath("//div[@id='search']/descendant::button")).click();
-        Assert.assertTrue(driver.findElement(By.linkText("HP LP3065")).isDisplayed());
+        HomePage homePage = new HomePage(driver);
+        homePage.searchType(computer);
+        homePage.clickOnSearchBtn();
+        Assert.assertTrue(homePage.verifySearch());
     }
     @Test
     public void SearchWithNonExistingProduct(){
-
-        driver.findElement(By.name("search")).sendKeys("sofia");
-        driver.findElement(By.xpath("//div[@id='search']/descendant::button")).click();
-        String actual = driver.findElement(By.xpath("//div[@id='content']/h2/following-sibling::p")).getText();
-        Assert.assertEquals(actual,"There is no product that matches the search criteria.");
+        HomePage homePage = new HomePage(driver);
+        homePage.searchType("Sofia");
+        homePage.clickOnSearchBtn();
+        Assert.assertEquals(homePage.noMatchSearch(),"There is no product that matches the search criteria.");
     }
     @Test
     public void SearchWithoutType(){
-
-        driver.findElement(By.name("search"));
-        driver.findElement(By.xpath("//div[@id='search']/descendant::button")).click();
-        String actual = driver.findElement(By.xpath("//div[@id='content']/h2/following-sibling::p")).getText();
-        Assert.assertEquals(actual,"There is no product that matches the search criteria.");
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnSearchBtn();
+        Assert.assertEquals(homePage.noMatchSearch(),"There is no product that matches the search criteria.");
     }
 }

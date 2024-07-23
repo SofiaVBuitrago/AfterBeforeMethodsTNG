@@ -3,8 +3,8 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/sofia.buitrago/Documents/BeforeAfterTestNGLogin/src/test/java">
         <classes>
-                <class name="Login"/>
                 <class name="Register"/>
+                <class name="Login"/>
                 <class name="Search"/>
 
         </classes>

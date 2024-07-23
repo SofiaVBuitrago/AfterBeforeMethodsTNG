@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,11 +9,14 @@ import java.util.concurrent.TimeUnit;
 public class Base {
     WebDriver driver;
     public Properties properties;
+    public Properties dataProp;
 
 
     public Base(){
         properties = new Properties();
         File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\config\\config.properties");
+
+
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             properties.load(fileInputStream);

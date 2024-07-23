@@ -1,6 +1,5 @@
 package Locators;
 
-import config.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,9 +15,12 @@ public class LoginPage {
 
     @FindBy(xpath="//input[@class='btn btn-primary']")
     private WebElement btn_login;
+    @FindBy(xpath = "//div[contains(text(),'Warning')]")
+    private WebElement wrongCredentialsWarning;
 
-    @FindBy (linkText = "Edit your account information")
-    private WebElement successfull_login;
+
+
+
 
     public LoginPage(WebDriver driver) {
         super();
@@ -27,8 +29,21 @@ public class LoginPage {
 
     }
 
-    public void enterEmail (){
-        input_email.sendKeys(properties.getProperty("validEmail"));
+    public void enterEmail (String email){
+        input_email.sendKeys(email);
+    }
+
+    public void enterPassword (String password){
+        input_password.sendKeys(password);
+    }
+
+    public void clickLogin (){
+        btn_login.click();
+    }
+
+    public String wrongCredentialsWarning (){
+       String warningCredentials = wrongCredentialsWarning.getText();
+       return warningCredentials;
     }
 
 
